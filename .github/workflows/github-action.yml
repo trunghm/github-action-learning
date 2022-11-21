@@ -1,0 +1,14 @@
+name: Deploy to Azure
+
+on:
+  push:
+    branches: 'main'
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - run: echo "The job was trigged by a ${{github.event_name}} event"
